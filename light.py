@@ -1,4 +1,4 @@
-class Light(object):
+class Light:
     """A Light Shines."""
 
     def __init__(self, lumens):
