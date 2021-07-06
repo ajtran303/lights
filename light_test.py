@@ -1,4 +1,5 @@
 import unittest
+from light import Light
 
 class LightTest(unittest.TestCase):
     """
@@ -22,9 +23,10 @@ class LightTest(unittest.TestCase):
     # def tearDown(self):
         # self.light.power_off() # ?
 
-    def test_it_exists(self):
+    def test_it_exists_with_attributes(self):
         """Smoke test"""
         self.assertIsInstance(self.light, Light)
+        self.assertEqual(self.light.lumens, 100)
 
     def test_it_does_not_shine_unless_powered(self):
         """Integration test"""
